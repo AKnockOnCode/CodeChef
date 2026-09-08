@@ -61,7 +61,7 @@ which has trace equal to $6 + 7 = 13$. (This submatrix is obtained for $r=2, c=1
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-08T16:31:43.198Z  
+**Submitted:** 2026-09-08T16:32:05.173Z  
 
 ```c_cpp
 #include <stdio.h>
