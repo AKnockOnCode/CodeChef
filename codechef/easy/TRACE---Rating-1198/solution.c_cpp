@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int trace(int N, int arr[N][N], int i, int j){
+    if (i>=N || j>=N)
+    return 0;
+    return arr[i][j] + trace(N, arr, i+1, j+1);
+}
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int N, i, j;
+    scanf("%d", &N);
+    int arr[N][N];
+    for (i=0;i<N;i++){
+        for (j=0;j<N;j++){
+        scanf("%d", &arr[i][j]);
+    }}
+    int max = arr[0][0];
+    for (i=0;i<N;i++){
+        for (j=0;j<N;j++){
+            if (max<trace(N, arr, i, j)){
+                max = trace(N, arr, i, j);
+            }
+        }
+    }
+    printf("%d\n", max);
+    }
+    return 0;
+}
