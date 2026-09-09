@@ -77,11 +77,18 @@ It can be shown that this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T14:45:13.845Z  
+**Submitted:** 2026-09-09T14:51:47.136Z  
 
 ```c_cpp
 #include <stdio.h>
+#include <stdlib.h>
 
+
+int compare(const void *a, const void *b) {
+    long long x = *(const long long *)a;
+    long long y = *(const long long *)b;
+    return (x > y) - (x < y);
+}
 int main() {
     int T;
     scanf("%d", &T);
@@ -93,17 +100,23 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%lld", &arr[i]);
     }
-    long long freq[200000]={0};
+    
+qsort(arr, N, sizeof(long long), compare);
+int freq = 1;
+int max = 0;
+int num = 0;
     for (i=0;i<N;i++){
-        freq[arr[i]]++;
-    }
-    long long max = 0;
-    for (i=0;i<200000;i++){
-        if (freq[i]>max){
-            max = freq[i];
+        if (num==arr[i]){
+            freq++;
+        }
+        else{
+            num = arr[i];
+        }
+        if (freq>max){
+            max = freq;
         }
     }
-    printf("%lld\n", max/2+max%2);
+    printf("%d\n", max/2+max%2);
     }
     return 0;
 }
