@@ -77,7 +77,7 @@ It can be shown that this is optimal.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T14:42:01.939Z  
+**Submitted:** 2026-09-09T14:43:41.186Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -89,21 +89,21 @@ int main() {
     int N;
     scanf("%d", &N);
     int i;
-    int arr[N];
+    long long arr[N];
     for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
+        scanf("%lld", &arr[i]);
     }
-    int freq[200000]={0};
+    long long freq[200000]={0};
     for (i=0;i<N;i++){
         freq[arr[i]]++;
     }
-    int max = 0;
+    long long max = 0;
     for (i=0;i<200000;i++){
         if (freq[i]>max){
             max = freq[i];
         }
     }
-    printf("%d\n", max/2+max%2);
+    printf("%lld\n", max/2+max%2);
     }
     return 0;
 }
