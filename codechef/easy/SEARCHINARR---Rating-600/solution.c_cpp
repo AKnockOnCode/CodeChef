@@ -1,0 +1,9 @@
+char* solve(int N, int X, int A[]) {
+    int i;
+    for (i=0;i<N;i++){
+        if (A[i]==X){
+            return "Yes\n";
+        }
+    }
+    return "No\n";
+}
