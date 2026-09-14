@@ -10,12 +10,12 @@ void dec(int arr[], int N, int K){
 
 int sum(int arr[], int N, int count, int K){
     for (int i=0;i<N;i++){
-        if (arr[i]){
-            count++;
-        }
         if (!(arr[K]-1)){
             count++;
             break;
+        }
+        if (arr[i]){
+            count++;
         }
     }
     return count;
