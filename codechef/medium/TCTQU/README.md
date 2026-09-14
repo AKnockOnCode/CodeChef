@@ -68,7 +68,7 @@ The target person finally completes their service at time  **9**.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T14:35:51.318Z  
+**Submitted:** 2026-09-14T14:34:58.804Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -94,7 +94,7 @@ int main() {
             wait +=arr[i];
         }
         else {
-            wait += arr[K]-1;
+            wait += arr[i]-1;
         }
     }
     printf("%lld\n", wait);
