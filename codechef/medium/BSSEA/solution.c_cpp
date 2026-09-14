@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <limits.h>
 int main() {
     int N;
     scanf("%d", &N);
@@ -8,20 +8,27 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    
-    int ans = 0;
     if (N==1){
         printf("%d\n", arr[0]);
     }
     else{
-    float avg = (arr[0]+arr[N-1])/2;
-    for (i=N-1;i>=0;i--){
+    float avg = (float)(arr[0] + arr[N-1]) / 2;
+    int min = 0, max = INT_MAX;
+    for (i=0;i<N;i++){
         if (arr[i] <= avg){
-            ans = arr[i];
-            break;
+            if (arr[i]>min){
+            min = arr[i];
+        }
+            
+        }
+        if (arr[i]>=avg){
+            if (arr[i]<max){
+                max = arr[i];
+            }
         }
     }
-    
-    printf("%d\n", ans);}
+    int result = (avg-min)<=(max-avg)?min:max;
+    printf("%d\n", result);
+    }
     return 0;
 }
