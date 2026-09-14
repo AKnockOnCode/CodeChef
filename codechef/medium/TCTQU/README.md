@@ -68,7 +68,7 @@ The target person finally completes their service at time  **9**.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T14:23:09.814Z  
+**Submitted:** 2026-09-14T14:23:14.530Z  
 
 ```c_cpp
 #include <stdio.h>
