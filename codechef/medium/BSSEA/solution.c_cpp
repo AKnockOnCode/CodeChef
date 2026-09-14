@@ -12,8 +12,18 @@ int main() {
         printf("%d\n", arr[0]);
     }
     else{
-    double avg = (double)(arr[0] + arr[N-1]) / 2;
-    int min = 0, max = INT_MAX;
+         int min = INT_MAX, max = INT_MIN;
+         for (i=0;i<N;i++){
+             if (arr[i]>max){
+                 max = arr[i];
+             }
+             if (arr[i]<min){
+                 min = arr[i];
+             }
+         }
+         
+    double avg = (double)(min + max) / 2;
+   
     for (i=0;i<N;i++){
         if (arr[i] <= avg){
             if (arr[i]>min){
