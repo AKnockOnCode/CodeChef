@@ -66,7 +66,7 @@ Seats $3$ and $7$ are both $2$ units away from the center. Choose seat $3$ becau
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T13:36:09.112Z  
+**Submitted:** 2026-09-14T13:37:16.024Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -79,7 +79,12 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
+    
     int ans = 0;
+    if (N==1){
+        printf("%d\n", arr[0]);
+    }
+    else{
     float avg = (arr[0]+arr[N-1])/2;
     for (i=N-1;i>=0;i--){
         if (arr[i] <= avg){
@@ -87,7 +92,8 @@ int main() {
             break;
         }
     }
-    printf("%d\n", ans);
+    
+    printf("%d\n", ans);}
     return 0;
 }
 ```
