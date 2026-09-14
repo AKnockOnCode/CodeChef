@@ -68,7 +68,7 @@ The target person finally completes their service at time  **9**.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T14:21:05.064Z  
+**Submitted:** 2026-09-14T14:23:09.814Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -83,12 +83,12 @@ void dec(int arr[], int N, int K){
 
 int sum(int arr[], int N, int count, int K){
     for (int i=0;i<N;i++){
-        if (arr[i]){
-            count++;
-        }
         if (!(arr[K]-1)){
             count++;
             break;
+        }
+        if (arr[i]){
+            count++;
         }
     }
     return count;
