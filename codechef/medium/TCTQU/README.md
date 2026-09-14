@@ -68,31 +68,10 @@ The target person finally completes their service at time  **9**.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T14:23:24.264Z  
+**Submitted:** 2026-09-14T14:34:01.550Z  
 
 ```c_cpp
 #include <stdio.h>
-void dec(int arr[], int N, int K){
-    int i;
-    for (i=0;i<N;i++){
-        if (arr[i]>0){
-            arr[i]--;
-        }
-    }
-}
-
-int sum(int arr[], int N, int count, int K){
-    for (int i=0;i<N;i++){
-        if (!(arr[K]-1)){
-            count++;
-            break;
-        }
-        if (arr[i]){
-            count++;
-        }
-    }
-    return count;
-}
 int main() {
     int N, K;
     scanf("%d %d", &N, &K);
@@ -101,13 +80,24 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    int count = 0;
-    int wait = 0;
-    while (arr[K]){
-        wait += sum(arr, N, count, K);
-        dec(arr, N, K);
+    long long wait = arr[K];
+    for (i=0;i<K;i++){
+        if (arr[i]<arr[K]){
+            wait += arr[i];
+        }
+        else{
+            wait +=arr[K];
+        }
     }
-    printf("%d\n", wait);
+    for (i=K+1;i<N;i++){
+        if (arr[i]<arr[K]){
+            wait +=arr[i];
+        }
+        else {
+            wait += arr[i]-K;
+        }
+    }
+    printf("%lld\n", wait);
     return 0;
 }
 ```
