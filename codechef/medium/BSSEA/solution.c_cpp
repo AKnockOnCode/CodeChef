@@ -12,7 +12,7 @@ int main() {
         printf("%d\n", arr[0]);
     }
     else{
-    float avg = (float)(arr[0] + arr[N-1]) / 2;
+    double avg = (double)(arr[0] + arr[N-1]) / 2;
     int min = 0, max = INT_MAX;
     for (i=0;i<N;i++){
         if (arr[i] <= avg){
