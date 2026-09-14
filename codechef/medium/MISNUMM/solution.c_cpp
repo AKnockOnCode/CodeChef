@@ -15,8 +15,8 @@ int main() {
         scanf("%d", &barr[i]);
     }
     int found = 0;
-    int hasha[10001] = {0};
-    int hashb[10001] = {0};
+    int hasha[1001] = {0};
+    int hashb[1001] = {0};
     for (i=0;i<M;i++){
         hashb[barr[i]]++;
     }
@@ -24,7 +24,7 @@ int main() {
         hasha[arr[i]]++;
     }
     int h = 0;
-    for (i=0;i<10001;i++){
+    for (i=0;i<1001;i++){
         if (hasha[i]<hashb[i]){
             h++;
             printf("%d ", i);
