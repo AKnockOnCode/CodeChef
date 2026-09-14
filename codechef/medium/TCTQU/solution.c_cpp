@@ -21,7 +21,7 @@ int main() {
             wait +=arr[i];
         }
         else {
-            wait += arr[i]-K;
+            wait += arr[K]-1;
         }
     }
     printf("%lld\n", wait);
