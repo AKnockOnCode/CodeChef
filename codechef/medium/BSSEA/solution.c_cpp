@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+    int i;
+    int arr[N];
+    for (i=0;i<N;i++){
+        scanf("%d", &arr[i]);
+    }
+    int ans = 0;
+    float avg = (arr[0]+arr[N-1])/2;
+    for (i=N-1;i>=0;i--){
+        if (arr[i] <= avg){
+            ans = arr[i];
+            break;
+        }
+    }
+    printf("%d\n", ans);
+    return 0;
+}
