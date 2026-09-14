@@ -66,11 +66,11 @@ Seats $3$ and $7$ are both $2$ units away from the center. Choose seat $3$ becau
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T13:38:31.028Z  
+**Submitted:** 2026-09-14T13:46:57.934Z  
 
 ```c_cpp
 #include <stdio.h>
-
+#include <limits.h>
 int main() {
     int N;
     scanf("%d", &N);
@@ -79,21 +79,28 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    
-    int ans = 0;
     if (N==1){
         printf("%d\n", arr[0]);
     }
     else{
-    float avg = (arr[0]+arr[N-1])/2;
-    for (i=N-1;i>=0;i--){
+    float avg = (float)(arr[0] + arr[N-1]) / 2;
+    int min = 0, max = INT_MAX;
+    for (i=0;i<N;i++){
         if (arr[i] <= avg){
-            ans = arr[i];
-            break;
+            if (arr[i]>min){
+            min = arr[i];
+        }
+            
+        }
+        if (arr[i]>=avg){
+            if (arr[i]<max){
+                max = arr[i];
+            }
         }
     }
-    
-    printf("%d\n", ans);}
+    int result = (avg-min)<=(max-avg)?min:max;
+    printf("%d\n", result);
+    }
     return 0;
 }
 ```
