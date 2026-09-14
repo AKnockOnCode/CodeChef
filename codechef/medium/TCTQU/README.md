@@ -68,7 +68,7 @@ The target person finally completes their service at time  **9**.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T14:23:28.702Z  
+**Submitted:** 2026-09-14T14:26:53.503Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -83,7 +83,7 @@ void dec(int arr[], int N, int K){
 
 int sum(int arr[], int N, int count, int K){
     for (int i=0;i<N;i++){
-        if (!(arr[K]-1)){
+        if (i==K && arr[K]==1){
             count++;
             break;
         }
@@ -102,12 +102,12 @@ int main() {
         scanf("%d", &arr[i]);
     }
     int count = 0;
-    int wait = 0;
+    long long wait = 0;
     while (arr[K]){
         wait += sum(arr, N, count, K);
         dec(arr, N, K);
     }
-    printf("%d\n", wait);
+    printf("%lld\n", wait);
     return 0;
 }
 ```
