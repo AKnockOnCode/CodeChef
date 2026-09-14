@@ -69,7 +69,7 @@ Each of $204$, $205$, and $206$ occurs three times in $B$ but only twice in $A$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-14T14:06:46.084Z  
+**Submitted:** 2026-09-14T14:05:38.154Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -89,8 +89,8 @@ int main() {
         scanf("%d", &barr[i]);
     }
     int found = 0;
-    int hasha[10001] = {0};
-    int hashb[10001] = {0};
+    int hasha[1001] = {0};
+    int hashb[1001] = {0};
     for (i=0;i<M;i++){
         hashb[barr[i]]++;
     }
@@ -98,7 +98,7 @@ int main() {
         hasha[arr[i]]++;
     }
     int h = 0;
-    for (i=0;i<10001;i++){
+    for (i=0;i<1001;i++){
         if (hasha[i]<hashb[i]){
             h++;
             printf("%d ", i);
