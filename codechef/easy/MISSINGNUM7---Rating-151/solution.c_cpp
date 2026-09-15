@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+    int S;
+    scanf("%d", &S);
+    if (S==6)printf("4\n");
+    else if (S==7)printf("3\n");
+    else if (S==8)printf("2\n");
+    else printf("1\n");
+    return 0;
+}
