@@ -56,11 +56,14 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T15:18:00.241Z  
+**Submitted:** 2026-09-16T15:26:56.343Z  
 
 ```c_cpp
 #include <stdio.h>
-
+#include <stdlib.h>
+int compare(const void *a, const void *b){
+    return (*(int *)a - *(int *)b);
+}
 int main() {
     int T;
     scanf("%d", &T);
@@ -72,32 +75,18 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    int a = N/2;
-    int hash[200001]={0};
-    for (i=0;i<N;i++){
-        hash[arr[i]]++;
+    qsort(arr, N, sizeof(int), compare);
+    long long max  = 0, min = 0;
+    for (i = N-1;i>N/2;i--){
+        max += arr[i];
     }
-    long long max = 0;
-    for (i=200000;i>=0;i--){
-        if (hash[i]){
-            max += i*hash[i];
-            a = a-hash[i];
-            if (a==0)break;
-            if (a<0){
-                max = max + (a*hash[i])/hash[i];
-                break;
-            }
-        }
+    for (i=0;i<=N/2;i++){
+        min += arr[i];
     }
-    long long min = 0;
-    for (i=0;i<N;i++){
-        min+=arr[i];
-    }
-    min -= max;
+    long long minsize = N-N/2;
     long long maxsize = N/2;
-    long long minsize= N-N/2;
-    printf("%lld\n", max * minsize + min *maxsize);
-    }
+    printf("%lld\n", max * minsize + min * maxsize);
+}
     return 0;
 }
 ```
