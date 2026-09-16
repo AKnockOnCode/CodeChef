@@ -56,7 +56,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T15:27:30.235Z  
+**Submitted:** 2026-09-16T15:34:10.112Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -76,17 +76,19 @@ int main() {
         scanf("%d", &arr[i]);
     }
     qsort(arr, N, sizeof(int), compare);
-    long long max  = 0, min = 0;
-    for (i = N-1;i>N/2;i--){
-        max += arr[i];
-    }
-    for (i=0;i<=N/2;i++){
+    long long max  = 0, min = 0, calc=0, sum = 0;
+    for (i=0;i<N;i++){
         min += arr[i];
     }
-    long long minsize = N-N/2;
-    long long maxsize = N/2;
-    printf("%lld\n", max * minsize + min * maxsize);
-}
+    for (i=N-1;i>0;i--){
+        max +=arr[i];
+        calc = max * i + (min-max)*(N-i); 
+        if (calc>sum){
+            sum = calc;
+        }
+    }
+    printf("%lld\n", sum);
+    }
     return 0;
 }
 ```
