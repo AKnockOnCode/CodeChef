@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main(){
+    int t;
+    scanf("%d", &t);
+    while (t--){
+        int n, k;
+        scanf("%d %d", &n, &k);
+        int arr[n];
+        int i, j;
+        for (i=0;i<n;i++){
+            scanf("%d", &arr[i]);
+        }
+        int loop = k+1;
+        int check = 0;
+        int st = k;
+        int la=n;
+        int sum = 0, min = 100001;
+        while(loop--){
+            sum = 0;
+            check = 0;
+            for (i=0;i<st;i++){
+                sum += arr[i];
+            }
+            st--;
+            for (i=n-1;i>=la;i--){
+                sum += arr[i];
+            }
+            la--;
+            if (sum<min){
+                min = sum;
+            }
+        }
+        sum = 0;
+        for (i=0;i<n;i++){
+            sum += arr[i];
+        }
+        printf("%d\n", sum - min);
+    }
+    return 0;
+}
