@@ -55,7 +55,7 @@ Yes
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-16T14:44:51.335Z  
+**Submitted:** 2026-09-16T14:47:31.268Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -64,17 +64,17 @@ int main() {
     int T;
     scanf("%d", &T);
     while (T--) {
-    int N;
-    scanf("%d", &N);
-    int i;
-    int arr[N];
-    for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
+    int N, K;
+    scanf("%d %d", &N, &K);
+    if (N-1==K){
+        printf("No\n");
     }
-    
+    else{
+        printf("Yes\n");
+    }
     }
     return 0;
-}
+}   
 ```
 
 ---
