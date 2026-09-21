@@ -73,7 +73,7 @@ xyyyx
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T13:40:15.848Z  
+**Submitted:** 2026-09-21T13:42:26.839Z  
 
 ```c_cpp
 // #define MAX_STUDENTS 100005
@@ -92,6 +92,7 @@ int findMaximumPairs(Solution *sol, char students[]) {
         else{
             i++;
         }
+        if (students[i]=='\0') break;
     }
     return count;
 }
