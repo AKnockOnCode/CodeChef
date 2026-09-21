@@ -65,24 +65,45 @@ It contains two `0`s and two `1`s, so the entire string becomes balanced. Theref
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T13:48:34.614Z  
+**Submitted:** 2026-09-21T14:12:12.503Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
-    int T;
-    scanf("%d", &T);
-    while (T--) {
-    int N;
-    scanf("%d", &N);
-    int i;
-    int arr[N];
-    for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
+    char s[101];
+    scanf("%s", s);
+    int k;
+    scanf("%d", &k);
+    int i, j;
+    int count = 0, max  = 0, temp = 0;
+    int one = 0, zero  = 0;
+    for (i=0;s[i]!='\0';i++){
+        zero = 0;
+        one = 0;
+        temp = 0;
+        for (j=i;s[j+1]!='\0';j+=2){
+            if (s[j]=='0'){
+                zero++;
+            }
+            else{
+                one++;
+            }
+            if (s[j+1]=='0'){
+                zero++;
+            }
+            else{
+                one++;
+            }
+            if (abs(one-zero)/2<=k){
+                temp = one+zero;
+            }
+            if (temp>max){
+                max = temp;
+            }
+        }
     }
-    
-    }
+    printf("%d\n", max);
     return 0;
 }
 ```
