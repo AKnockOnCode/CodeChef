@@ -68,24 +68,27 @@ The seat pairs already contain couples $(3,2)$ and $(0,1)$. No swaps are needed.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T13:47:59.378Z  
+**Submitted:** 2026-09-21T13:54:12.379Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
-    int T;
-    scanf("%d", &T);
-    while (T--) {
-    int N;
-    scanf("%d", &N);
+    int S;
+    scanf("%d", &S);
     int i;
+    int N = 2 * S;
     int arr[N];
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    
+    int count = 0;
+    for (i=0;i<N-1;i++){
+        if (arr[i]^1!=arr[i+1]){
+            count++;
+        }
     }
+    printf("%d\n", count);
     return 0;
 }
 ```
