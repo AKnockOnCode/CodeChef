@@ -68,7 +68,7 @@ The seat pairs already contain couples $(3,2)$ and $(0,1)$. No swaps are needed.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T13:57:32.190Z  
+**Submitted:** 2026-09-21T13:58:37.003Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -84,7 +84,7 @@ int main() {
     }
     int count = 0;
     for (i=0;i<N-1;i++){
-        if (arr[i]^1!=arr[i+1]){
+        if ((arr[i]^1)!=arr[i+1]){
             count++;
         }
     }
