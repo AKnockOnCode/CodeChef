@@ -68,7 +68,7 @@ The seat pairs already contain couples $(3,2)$ and $(0,1)$. No swaps are needed.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-21T13:54:12.379Z  
+**Submitted:** 2026-09-21T13:57:32.190Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -88,7 +88,7 @@ int main() {
             count++;
         }
     }
-    printf("%d\n", count);
+    printf("%d\n", count/2);
     return 0;
 }
 ```
