@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", & T);
+    while (T--) {
+        int A, B, C;
+        scanf("%d %d %d", & A, & B, & C);
+        int result;
+        if (A >= B && C >= B) result = A + C;
+        else if (A >= C && B >= C) result = A + B;
+        else result = B + C;
+        printf("%d\n", result);
+    }
+    return 0;
+}
