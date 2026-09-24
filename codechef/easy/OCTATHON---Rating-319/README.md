@@ -78,7 +78,7 @@ Chefina took $6$ hours to complete the marathon. Thus, she gets a `BRONZE` medal
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T18:28:38.259Z  
+**Submitted:** 2026-09-24T18:29:09.479Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -87,7 +87,7 @@ int main() {
     int X;
     scanf("%d", & X);
     if (X < 3) printf("Gold\n");
-    else if (X > 6) printf("Bronze\n");
+    else if (X >= 6) printf("Bronze\n");
     else printf("Silver\n");
     return 0;
 }
