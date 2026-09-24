@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int S, A, B, C;
+    scanf("%d %d %d %d", &S, &A, &B, &C);
+    int cost = S+(C*100)/S;
+    if (cost>=A && cost <=B){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    }
+    return 0;
+}
