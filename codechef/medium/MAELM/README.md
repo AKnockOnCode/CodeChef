@@ -86,7 +86,7 @@ Therefore, all elements of $B$ cannot be matched, and the answer is `FALSE`.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T14:19:50.419Z  
+**Submitted:** 2026-09-28T14:18:49.536Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -115,7 +115,9 @@ int main() {
             for (j=0;j<N;j++){
                 if (B[a][b]==A[i][j]){
                     num++;
-                    A[i][j]=INT_MAX;
+                    A[i][j]=LLONG_MAX;
+                    i=0;
+                    j=0;
                     if (b<M-1){
                         b++;
                     }
@@ -123,12 +125,8 @@ int main() {
                         b=0;
                         a++;
                     }
-                    continue;
                 }
             }
-        }
-        if (i==N && j==N){
-            break;
         }
     }
     if (num==M*M){
