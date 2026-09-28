@@ -25,8 +25,6 @@ int main() {
                 if (B[a][b]==A[i][j]){
                     num++;
                     A[i][j]=INT_MAX;
-                    i=0;
-                    j=0;
                     if (b<M-1){
                         b++;
                     }
@@ -37,6 +35,9 @@ int main() {
                     continue;
                 }
             }
+        }
+        if (i==N && j==N){
+            break;
         }
     }
     if (num==M*M){
