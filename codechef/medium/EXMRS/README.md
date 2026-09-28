@@ -59,7 +59,7 @@ Chef earns no marks and loses $5 \times 2=10$ marks. His final score is $-10$, w
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:31:36.753Z  
+**Submitted:** 2026-09-28T13:31:32.725Z  
 
 ```c_cpp
 #include <stdio.h>
