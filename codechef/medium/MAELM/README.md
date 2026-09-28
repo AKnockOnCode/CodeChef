@@ -86,7 +86,7 @@ Therefore, all elements of $B$ cannot be matched, and the answer is `FALSE`.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T14:05:55.195Z  
+**Submitted:** 2026-09-28T14:13:18.657Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -108,15 +108,15 @@ int main() {
             scanf("%lld", &B[i][j]);
         }
     }
-    int a, b;
+    int a=0, b=0;
     int num = 0;
     while (a<M){
         for (i=0;i<N;i++){
             for (j=0;j<N;j++){
-                if (A[i][j]=B[a][b]){
+                if (A[i][j]==B[a][b]){
                     num++;
                     A[i][j]=INT_MAX;
-                    if (b<M){
+                    if (b<M-1){
                         b++;
                     }
                     else{
