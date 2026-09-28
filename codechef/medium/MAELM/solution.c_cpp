@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <limits.h>
+int main() {
+    int N, M;
+    scanf("%d", &N);
+    scanf("%d", &M);
+    long long A[N][N];
+    long long B[M][M];
+    int i, j;
+    for (i=0;i<N;i++){
+        for (j=0;j<N;j++){
+            scanf("%lld", &A[i][j]);
+        }
+    }
+    for (i=0;i<M;i++){
+        for (j=0;j<M;j++){
+            scanf("%lld", &B[i][j]);
+        }
+    }
+    int a, b;
+    int num = 0;
+    while (a<M){
+        for (i=0;i<N;i++){
+            for (j=0;j<N;j++){
+                if (A[i][j]=B[a][b]){
+                    num++;
+                    A[i][j]=INT_MAX;
+                    if (b<M){
+                        b++;
+                    }
+                    else{
+                        b=0;
+                        a++;
+                    }
+                    continue;
+                }
+            }
+        }
+        if (i==N && j==N){
+            break;
+        }
+    }
+    if (num==M*M){
+        printf("True\n");
+    }
+    else{
+        printf("False\n");
+    }
+    return 0;
+}
