@@ -82,28 +82,28 @@ Therefore, no energy is required.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:34:04.747Z  
+**Submitted:** 2026-09-28T13:35:00.529Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
     int N;
-    scanf("%d", &N);
+    scanf("%d", & N);
     int i;
     int arr[N];
-    for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
+    for (i = 0; i < N; i++) {
+        scanf("%d", & arr[i]);
     }
     int energy = 0;
     int min = arr[0];
-    for (i=0;i<N;i++){
-        if (arr[i]<min){
+    for (i = 0; i < N; i++) {
+        if (arr[i] < min) {
             min = arr[i];
         }
     }
-    for (i=0;i<N;i++){
-        energy = arr[i]-min;
+    for (i = 0; i < N; i++) {
+        energy += arr[i] - min;
     }
     printf("%d\n", energy);
     return 0;
