@@ -83,7 +83,7 @@ Therefore, the minimum possible price is $321$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:38:44.423Z  
+**Submitted:** 2026-09-28T13:51:10.386Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -95,13 +95,43 @@ int main() {
     int N;
     scanf("%d", &N);
     int i;
-    int digits = 0;
     int temp = N;
+    int check = 0;
+    int digits = 0
     while (temp){
         digits++;
         temp /= 10;
     }
-    printf("%d\n", N/(digits*10));
+    temp = N;
+    int digit = digits;
+    int limits = digits;
+    int arr[digits];
+    for (i=0;i<limits;i++){
+        if (temp/10){
+        arr[i]= temp/pow(10, digits-1);
+        temp%=pow(10, digits-1);
+            digits--;
+        }
+        else{
+        arr[i]=temp;
+        }
+    }
+    int max  = 0;
+    while(arr[i]!=0){
+        if (arr[i]>max){
+            max = arr[i++];
+        }
+    }
+    int used = 0;
+    int result = 0;
+    for (i=0;i<digit;i++){
+        if (arr[i]==max && !used){
+            used++;
+            continue;
+        }
+        result = result * 10 + arr[i];
+    }
+    printf("%d\n", result);
     }
     return 0;
 }
