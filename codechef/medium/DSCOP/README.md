@@ -83,7 +83,7 @@ Therefore, the minimum possible price is $321$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T14:20:09.387Z  
+**Submitted:** 2026-09-28T14:29:32.905Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -106,26 +106,26 @@ int main() {
         int digit = digits;
         int limits = digits;
         int arr[digits];
-        for (i = 0; i < limits; i++) {
-            if (temp / 10) {
-                arr[i] = temp / pow(10, digits - 1);
-                temp %= (long long)pow(10, digits - 1);
-                digits--;
-            }
-            else {
-                arr[i] = temp;
-            }
+        long long divisor = 1;
+        for (int k = 0; k < digits - 1; k++) {
+            divisor *= 10;
         }
+        for (i = 0; i < limits; i++) {
+            arr[i] = temp / divisor;
+            temp %= divisor;
+            divisor /= 10;
+        }
+        i = 0;
         int max = 0;
-        while (i!=digit) {
-            if (arr[i] > arr[i+1]) {
+        while (i != digit - 1) {
+            if (arr[i] > arr[i + 1]) {
                 max = arr[i];
                 break;
             }
             i++;
         }
-        if (i==digit){
-            max = arr[digit-1];
+        if (i == digit - 1) {
+            max = arr[i];
         }
         int used = 0;
         int result = 0;
