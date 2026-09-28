@@ -82,7 +82,7 @@ Therefore, no energy is required.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:40:28.490Z  
+**Submitted:** 2026-09-28T13:40:49.876Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -95,7 +95,7 @@ int main() {
     for (i = 0; i < N; i++) {
         scanf("%d", & arr[i]);
     }
-    int energy = 0;
+    long long energy = 0;
     int min = arr[0];
     for (i = 0; i < N; i++) {
         if (arr[i] < min) {
@@ -105,7 +105,7 @@ int main() {
     for (i = 0; i < N; i++) {
         energy += arr[i] - min;
     }
-    printf("%d\n", energy);
+    printf("%lld\n", energy);
     return 0;
 }
 ```
