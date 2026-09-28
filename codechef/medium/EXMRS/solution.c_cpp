@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int C, M, W, P, R;
+    scanf("%d %d %d %d %d", &C, &M, &W, &P, &R);
+    int score = C * M - W * P;
+    if (score>=R){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
