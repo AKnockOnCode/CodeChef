@@ -83,7 +83,7 @@ Therefore, the minimum possible price is $321$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-28T13:53:21.378Z  
+**Submitted:** 2026-09-28T14:20:09.387Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -117,10 +117,15 @@ int main() {
             }
         }
         int max = 0;
-        while (arr[i] != 0) {
-            if (arr[i] > max) {
-                max = arr[i++];
+        while (i!=digit) {
+            if (arr[i] > arr[i+1]) {
+                max = arr[i];
+                break;
             }
+            i++;
+        }
+        if (i==digit){
+            max = arr[digit-1];
         }
         int used = 0;
         int result = 0;
