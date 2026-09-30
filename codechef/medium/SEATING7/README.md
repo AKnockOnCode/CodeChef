@@ -56,7 +56,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T14:46:55.080Z  
+**Submitted:** 2026-09-30T14:48:31.301Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -74,8 +74,9 @@ int main() {
     }
     int j = 1;
     int found = 0;
-    while(K--){
-        for (i=0;j<arr[i];i++){
+    while(K){
+        found = 0;
+        for (i=0;i<M;i++){
             if (arr[i]==j){
                 found = 1;
                 j++;
@@ -85,6 +86,7 @@ int main() {
         }
         if (!found){
             printf("%d ", j++);
+            K--;
         }
     }
     printf("\n");
