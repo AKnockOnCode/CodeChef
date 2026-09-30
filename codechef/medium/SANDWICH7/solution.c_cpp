@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main() {
+    int B, H, C;
+    scanf("%d %d %d", &B, &H, &C);
+    int filling = H + C;
+    int min = B<filling?B:filling;
+    printf("%d\n", min);
+    return 0;
+}
