@@ -58,7 +58,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:16:58.119Z  
+**Submitted:** 2026-09-30T15:31:28.383Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -74,7 +74,17 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    
+    int hash[200001]={0};
+    for (i=0;i<N;i++){
+        hash[N+arr[i]-i]++;
+    }
+    int max = 0;
+    for (i=0;i<200001;i++){
+        if (hash[i]>max){
+            max = hash[i];
+        }
+    }
+    printf("%d\n", N - max);
     }
     return 0;
 }
