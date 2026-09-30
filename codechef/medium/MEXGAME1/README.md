@@ -64,7 +64,7 @@ Alice
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:10:25.739Z  
+**Submitted:** 2026-09-30T15:12:34.291Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -91,13 +91,20 @@ int main() {
             break;
         }
     }
+    int dup = 0;
+    for (i=1;i<min;i++){
+        if (hash[i]>1){
+            dup += hash[i] - 1;
+        }
+    }
     int sum = 0;
     for (i=0;i<N;i++){
         if (arr[i]>min){
-            sum += arr[i] - min;
+            sum += arr[i] - min + 1;
         }
     }
-    if (sum%2){
+    int result = sum + dup;
+    if (result%2){
         printf("Alice\n");
     }
     else{
