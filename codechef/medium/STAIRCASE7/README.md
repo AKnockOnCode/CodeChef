@@ -58,10 +58,12 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:31:28.383Z  
+**Submitted:** 2026-09-30T15:36:35.577Z  
 
 ```c_cpp
 #include <stdio.h>
+
+int hash[400005];
 
 int main() {
     int T;
@@ -74,17 +76,19 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    int hash[200001]={0};
     for (i=0;i<N;i++){
         hash[N+arr[i]-i]++;
     }
     int max = 0;
-    for (i=0;i<200001;i++){
+    for (i=0;i<=2*N;i++){
         if (hash[i]>max){
             max = hash[i];
         }
     }
     printf("%d\n", N - max);
+    for (i = 0; i < N; i++) {
+            hash[N + arr[i] - i] = 0;
+        }
     }
     return 0;
 }
