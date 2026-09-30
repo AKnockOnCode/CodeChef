@@ -57,7 +57,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T14:36:55.390Z  
+**Submitted:** 2026-09-30T14:37:24.170Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -66,7 +66,7 @@ int main() {
     int B, H, C;
     scanf("%d %d %d", &B, &H, &C);
     int filling = H + C;
-    int min = B<filling?B:filling;
+    int min = (B/2)<filling?(B/2):filling;
     printf("%d\n", min);
     return 0;
 }
