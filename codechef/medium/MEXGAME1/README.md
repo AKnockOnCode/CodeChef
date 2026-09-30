@@ -64,7 +64,7 @@ Alice
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T14:54:28.093Z  
+**Submitted:** 2026-09-30T15:10:25.739Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -80,7 +80,29 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    
+    int min = 101;
+    int hash[102]={0};
+    for (i=0;i<N;i++){
+        hash[arr[i]]++;
+    }
+    for (i=0;i<102;i++){
+        if (!hash[i]){
+            min = i;
+            break;
+        }
+    }
+    int sum = 0;
+    for (i=0;i<N;i++){
+        if (arr[i]>min){
+            sum += arr[i] - min;
+        }
+    }
+    if (sum%2){
+        printf("Alice\n");
+    }
+    else{
+        printf("Bob\n");
+    }
     }
     return 0;
 }
