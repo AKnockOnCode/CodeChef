@@ -64,7 +64,7 @@ Alice
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T14:53:45.772Z  
+**Submitted:** 2026-09-30T14:54:28.093Z  
 
 ```c_cpp
 #include <stdio.h>
