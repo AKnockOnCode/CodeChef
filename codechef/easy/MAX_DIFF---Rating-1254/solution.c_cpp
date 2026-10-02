@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int N, S;
+    scanf("%d %d", &N, &S);
+    if (N>=S){
+        printf("%d\n", S);
+    }
+    else{
+        printf("%d\n", 2*N-S);
+    }
+    }
+    return 0;
+}
