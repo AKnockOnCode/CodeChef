@@ -49,7 +49,7 @@ No
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-24T18:15:56.417Z  
+**Submitted:** 2026-10-03T09:33:19.886Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -60,7 +60,7 @@ int main() {
     while (T--) {
     int S, A, B, C;
     scanf("%d %d %d %d", &S, &A, &B, &C);
-    int cost = S+(C*100)/S;
+    float cost = S+ ((float)(C*S)/100);
     if (cost>=A && cost <=B){
         printf("Yes\n");
     }
