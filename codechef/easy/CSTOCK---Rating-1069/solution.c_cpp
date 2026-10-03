@@ -6,7 +6,7 @@ int main() {
     while (T--) {
     int S, A, B, C;
     scanf("%d %d %d %d", &S, &A, &B, &C);
-    int cost = S+(C*100)/S;
+    float cost = S+ ((float)(C*S)/100);
     if (cost>=A && cost <=B){
         printf("Yes\n");
     }
