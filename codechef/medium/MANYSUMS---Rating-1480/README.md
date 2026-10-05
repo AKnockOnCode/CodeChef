@@ -44,19 +44,19 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-04T11:28:03.936Z  
+**Submitted:** 2026-10-04T11:28:37.088Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
     int T;
-    scanf("%d", & T);
+    scanf("%d", &T);
     while (T--) {
-        int L, R;
-        scanf("%d %d", & L, & R);
-        int count = 2 * R - 2 * L + 1;
-        printf("%d\n", count);
+    int L, R;
+    scanf("%d %d", &L, &R);
+    int count = 2*R-2*L+1;
+    printf("%d\n", count);
     }
     return 0;
 }
