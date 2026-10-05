@@ -48,7 +48,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T13:42:23.331Z  
+**Submitted:** 2026-10-05T13:55:25.518Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -60,8 +60,19 @@ int main() {
     while (T--){
         int N;
         scanf("%d", &N);
-        int num =  N*(N+1)/2;
-        
+        int layer = 1;
+        int sum = 0;
+        int calc;
+        for (int i = 1;i<=N;i++){
+            calc = layer * (layer+1)/2;
+            if(calc<=N){
+                layer++;
+            }
+            else{
+                break;
+            }
+        }
+        printf("%d\n", layer-1);    
     }
     return 0;
 }
