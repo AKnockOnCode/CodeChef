@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+#include <math.h>
+
+int main() {
+    int T;
+    scanf("%d", & T);
+    while (T--) {
+        int a, b, c, d, k;
+        scanf("%d %d %d %d %d", & a, & b, & c, & d, & k);
+        int steps = abs(a - c) + abs(b - d);
+        if (steps > k || (k-steps) % 2 == 1) {
+            printf("NO\n");
+        }
+        else {
+            printf("YES\n");
+        }
+    }
+    return 0;
+}
