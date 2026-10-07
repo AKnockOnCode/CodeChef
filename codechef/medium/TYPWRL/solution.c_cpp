@@ -26,6 +26,7 @@ int main() {
         }
         if (!found){
             countr++;
+            countl=0;
         }
         if (found){
             countr=0;
