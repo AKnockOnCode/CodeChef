@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int X, K, Y;
+    scanf("%d %d %d", &X, &K, &Y);
+    if (Y%K==0 && Y <= X*K){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
