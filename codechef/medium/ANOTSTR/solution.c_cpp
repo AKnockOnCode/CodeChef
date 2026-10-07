@@ -21,7 +21,7 @@ int main() {
             countb++;
         }
     }
-    if (counta==countb){
+    if (counta%2==countb%2){
         printf("YES\n");
     }
     else{
