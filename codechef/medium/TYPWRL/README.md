@@ -62,7 +62,7 @@ abcdefghijklmnopqrstuvwxyz
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T14:56:55.216Z  
+**Submitted:** 2026-10-07T14:58:25.711Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -93,6 +93,7 @@ int main() {
         }
         if (!found){
             countr++;
+            countl=0;
         }
         if (found){
             countr=0;
