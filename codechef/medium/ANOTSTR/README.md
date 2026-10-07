@@ -72,7 +72,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T14:52:42.872Z  
+**Submitted:** 2026-10-07T14:56:23.449Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -98,7 +98,7 @@ int main() {
             countb++;
         }
     }
-    if (counta==countb){
+    if (counta%2==countb%2){
         printf("YES\n");
     }
     else{
