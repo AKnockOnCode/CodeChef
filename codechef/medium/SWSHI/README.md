@@ -76,39 +76,41 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T13:56:27.675Z  
+**Submitted:** 2026-10-12T13:55:37.679Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
     int T;
-    scanf("%d", & T);
+    scanf("%d", &T);
     while (T--) {
-        int N, M;
-        scanf("%d %d", & N, & M);
-        int i, j;
-        int arr[N];
-        for (i = 0; i < N; i++) {
-            scanf("%d", & arr[i]);
+    int N, M;
+    scanf("%d %d", &N, &M);
+    int i, j;
+    int arr[N];
+    for (i=0;i<N;i++){
+        scanf("%d", &arr[i]);
+    }
+    int money = M;
+    int sum = 0, max = 0;
+    while (j < N){
+            if (M-arr[j]>=0){
+            sum ++;
+            M -= arr[j++];
         }
-        int money = M;
-        int sum = 0, max = 0;
-        while (j < N) {
-            if (M - arr[j] >= 0) {
-                sum++;
-                M -= arr[j++];
+            else{
+                break;
             }
-        
-        if (sum > max) {
+        }
+        if (sum>max){
             max = sum;
         }
         sum = 0;
     }
-    }
     printf("%d\n", max);
-}
-return 0;
+    }
+    return 0;
 }
 ```
 
