@@ -76,7 +76,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T14:04:36.790Z  
+**Submitted:** 2026-10-12T14:07:38.977Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -106,6 +106,7 @@ int main() {
             }
             else{
                 j++;
+                i++;
             }
             if (sum > max) {
                 max = sum;
