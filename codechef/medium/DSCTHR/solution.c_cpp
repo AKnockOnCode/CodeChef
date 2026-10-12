@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+    int result = A>B?(A>C?A:C):(B>C?B:C);
+    printf("%d\n", result);
+    }
+    return 0;
+}
