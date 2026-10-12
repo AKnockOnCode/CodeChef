@@ -76,7 +76,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T13:47:45.696Z  
+**Submitted:** 2026-10-12T13:51:56.678Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -87,23 +87,31 @@ int main() {
     while (T--) {
     int N, M;
     scanf("%d %d", &N, &M);
-    int i;
+    int i, j;
     int arr[N];
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
+    int money = M;
     int sum = 0, max = 0;
     for (i=0;i<N;i++){
-        while (M>0){
-            if (M-arr[i]>=0){
-            sum += arr[i];
-            M -= arr[i];
+        j = i;
+        M = money;
+        while (j < N){
+            if (M-arr[j]>=0){
+            sum ++;
+            M -= arr[j++];
         }
             else{
                 break;
             }
         }
+        if (sum>max){
+            max = sum;
+        }
+        sum = 0;
     }
+    printf("%d\n", max);
     }
     return 0;
 }
