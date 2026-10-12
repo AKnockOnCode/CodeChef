@@ -72,7 +72,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T13:40:08.815Z  
+**Submitted:** 2026-10-12T13:43:52.008Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -84,18 +84,20 @@ int main() {
     while (T--) {
     int M, X, Y;
     scanf("%d %d %d", &M, &X, &Y);
-    int i;
+    int i, j;
     int arr[M];
     for (i=0;i<M;i++){
         scanf("%d", &arr[i]);
     }
     int count = 0;
     for (i=1;i<=100;i++){
-        if (abs(i-arr[i]) > X*Y){
+        for (j=0;j<M;j++){
+        if (abs(i-arr[j]) <= X*Y){
             count++;
-        }
+            break;
+        }}
     }
-    printf("%d\n", count);
+    printf("%d\n", 100-count);
     }
     return 0;
 }
