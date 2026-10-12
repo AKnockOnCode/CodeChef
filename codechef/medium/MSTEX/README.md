@@ -63,38 +63,38 @@ For the third test case, Chef buys only the most expensive item, which costs $11
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T13:34:56.082Z  
+**Submitted:** 2026-10-12T13:35:01.023Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
     int T;
-    scanf("%d", &T);
+    scanf("%d", & T);
     while (T--) {
-    int N, K;
-    scanf("%d %d", &N, &K);
-    int i, j;
-    int arr[N];
-    for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
-    }
-    int temp;
-    for (i=0;i<N-1;i++){
-        for (j=0;j<N-1;j++){
-            if (arr[j]>arr[j+1]){
-                temp = arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-            } 
+        int N, K;
+        scanf("%d %d", & N, & K);
+        int i, j;
+        int arr[N];
+        for (i = 0; i < N; i++) {
+            scanf("%d", & arr[i]);
         }
-    }
-    int sum = 0;
-    i= N-1;
-    while(K--){
-      sum+= arr[i--];  
-    }
-    printf("%d\n", sum);
+        int temp;
+        for (i = 0; i < N - 1; i++) {
+            for (j = 0; j < N - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        int sum = 0;
+        i = N - 1;
+        while (K--) {
+            sum += arr[i--];
+        }
+        printf("%d\n", sum);
     }
     return 0;
 }
