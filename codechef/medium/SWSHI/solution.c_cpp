@@ -25,6 +25,7 @@ int main() {
             }
             else{
                 j++;
+                i++;
             }
             if (sum > max) {
                 max = sum;
