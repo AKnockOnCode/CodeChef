@@ -76,7 +76,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-12T13:55:37.679Z  
+**Submitted:** 2026-10-12T13:52:04.296Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -94,7 +94,10 @@ int main() {
     }
     int money = M;
     int sum = 0, max = 0;
-    while (j < N){
+    for (i=0;i<N;i++){
+        j = i;
+        M = money;
+        while (j < N){
             if (M-arr[j]>=0){
             sum ++;
             M -= arr[j++];
