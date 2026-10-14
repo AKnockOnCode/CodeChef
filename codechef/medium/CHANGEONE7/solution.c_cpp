@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int cmp(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int N;
+    scanf("%d", &N);
+    int i;
+    int arr[N];
+    for (i=0;i<N;i++){
+        scanf("%d", &arr[i]);
+    }
+    int min = 100;
+    if (N==2){
+        min = 0;
+    }
+    else{
+        qsort(arr, N, sizeof(int), cmp);
+        if (N==3){
+            min = arr[1]-arr[0]<arr[2]-arr[1]?arr[1]-arr[0]:arr[2]-arr[1];
+        }
+        else{
+            min = arr[N-2]-arr[0]<arr[N-1]-arr[1]?arr[N-2]-arr[0]:arr[N-1]-arr[1];
+        }
+    }
+    printf("%d\n", min);
+    }
+    return 0;
+}
