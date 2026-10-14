@@ -15,12 +15,14 @@ int main() {
         scanf("%d", &arr[i]);
     }
     qsort(arr, N, sizeof(int), cmp);
-    i = 1;
-    int sum = arr[0];
-    while (i<N && K--){
-        sum += arr[i++];
+    int min = 100;
+    if (N==2){
+        min = arr[1]+arr[0];
     }
-    printf("%d\n", sum);
+    else {
+        min = arr[1]+arr[0]>arr[N-1]?arr[1]+arr[0]:arr[N-1];
+    }
+    printf("%d\n", min);
     }
     return 0;
 }
