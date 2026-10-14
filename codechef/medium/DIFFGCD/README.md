@@ -54,7 +54,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-14T15:14:20.410Z  
+**Submitted:** 2026-10-14T15:15:26.380Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -75,8 +75,8 @@ int main() {
     int N;
     scanf("%d", &N);
     int i, j, count = 0;
-    for (i=1;i<=N;i++){
-        for (j=1;j<=N;j++){
+    for (i=1;i<N;i++){
+        for (j=i+1;j<=N;j++){
             if (gcd(i, j)==abs(i-j)){
                 count++;
             }
