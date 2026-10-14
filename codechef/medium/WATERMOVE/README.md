@@ -63,7 +63,7 @@ At the end, the array is $[0, 5, 0, 5, 5]$, and the maximum is $5$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-14T15:04:56.458Z  
+**Submitted:** 2026-10-14T15:12:34.168Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -83,12 +83,14 @@ int main() {
         scanf("%d", &arr[i]);
     }
     qsort(arr, N, sizeof(int), cmp);
-    i = 1;
-    int sum = arr[0];
-    while (i<N && K--){
-        sum += arr[i++];
+    int min = 100;
+    if (N==2){
+        min = arr[1]+arr[0];
     }
-    printf("%d\n", sum);
+    else {
+        min = arr[1]+arr[0]>arr[N-1]?arr[1]+arr[0]:arr[N-1];
+    }
+    printf("%d\n", min);
     }
     return 0;
 }
