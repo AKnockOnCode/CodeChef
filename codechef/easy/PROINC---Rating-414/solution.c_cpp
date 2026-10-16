@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+    int initialPrice = (X - Y);
+    int newPrice = X*1.1;
+    printf("%d\n", newPrice-initialPrice);
+    }
+    return 0;
+}
