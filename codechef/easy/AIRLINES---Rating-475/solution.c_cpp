@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int X, Y, Z;
+    scanf("%d %d %d", &X, &Y, &Z);
+    if (Y<=X*10){
+        printf("%d\n", Y*Z);
+    }
+    else{
+        printf("%d\n", X*Z*10);
+    }
+    }
+    return 0;
+}
