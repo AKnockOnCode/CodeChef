@@ -50,33 +50,14 @@ Output
 
 ## Solution
 
-**Language:** c_cpp  
+**Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:49:56.614Z  
+**Submitted:** 2026-10-21T15:08:29.576Z  
 
-```c_cpp
-#include <stdio.h>
+```py
+# cook your dish here
 
-int main() {
-    int T;
-    scanf("%d", &T);
-    while (T--) {
-    int N, D;
-    scanf("%d %d", &N, &D);
-    int num, digits= 0, found = 1;
-    while (found){
-        found = 0;
-        num = N++;
-    while (num){
-    if (num%10==D)found = 1;
-        num /= 10;
-    }
-    }
-    printf("%d\n", N-1);
-    }
-    return 0;
-}
 ```
 
 ---
