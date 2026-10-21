@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int N, S;
+    scanf("%d %d", &N, &S);
+    int count = (S-1)/4 + 1;
+    int score = count * 4;
+    while (score!=S){
+        score--;
+        count++;
+    }
+    if (S==0){
+        printf("0\n");
+    }
+    else if (count>N){
+        printf("-1\n");
+    }
+    else{
+        printf("%d\n", count);
+    }
+    }
+    return 0;
+}
