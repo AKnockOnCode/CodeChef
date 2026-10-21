@@ -50,14 +50,35 @@ Output
 
 ## Solution
 
-**Language:** Python  
+**Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:08:29.576Z  
+**Submitted:** 2026-10-21T15:23:36.142Z  
 
-```py
-# cook your dish here
+```c_cpp
+#include <stdio.h>
 
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int N, D;
+    scanf("%d %d", &N, &D);
+    int num=N, digits= 0, place = 1;
+    while (num){
+        if (num%10==D){
+            N = ((N/place)+1)*place;
+            num = N;
+            place = 1;
+        }
+        else{
+        num /= 10;
+        place *= 10;
+    }}
+    printf("%d\n", N);
+    }
+    return 0;
+}
 ```
 
 ---
