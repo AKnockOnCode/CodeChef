@@ -6,16 +6,18 @@ int main() {
     while (T--) {
     int N, D;
     scanf("%d %d", &N, &D);
-    int num, digits= 0, found = 1;
-    while (found){
-        found = 0;
-        num = N++;
+    int num=N, digits= 0, place = 1;
     while (num){
-    if (num%10==D)found = 1;
+        if (num%10==D){
+            N = ((N/place)+1)*place;
+            num = N;
+            place = 1;
+        }
+        else{
         num /= 10;
-    }
-    }
-    printf("%d\n", N-1);
+        place *= 10;
+    }}
+    printf("%d\n", N);
     }
     return 0;
 }
