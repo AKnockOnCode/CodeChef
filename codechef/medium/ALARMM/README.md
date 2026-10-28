@@ -70,7 +70,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T14:48:04.704Z  
+**Submitted:** 2026-10-28T14:43:22.675Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -90,10 +90,10 @@ int main() {
             num = K + 1;
             j = i;
             if (arr[i] == '1') {
-                alarms++;
                 while (num-- && j >= 0) {
-                    if (arr[j] == '1') {
+                    if (arr[j] == 0) {
                         arr[j--] = '0';
+                        alarms++;
                     }
                 }
             }
