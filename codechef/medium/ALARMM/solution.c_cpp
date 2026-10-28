@@ -15,10 +15,10 @@ int main() {
             num = K + 1;
             j = i;
             if (arr[i] == '1') {
-                alarms++;
                 while (num-- && j >= 0) {
-                    if (arr[j] == '1') {
+                    if (arr[j] == 0) {
                         arr[j--] = '0';
+                        alarms++;
                     }
                 }
             }
