@@ -10,10 +10,7 @@ int main() {
         char arr[N + 1];
         scanf("%s", arr);
         int alarms = 0;
-        int num = K, j;
         for (i = N - 1; i >= 0; i--) {
-            num = K + 1;
-            j = i;
             if (arr[i] == '1') {
                 alarms++;
                 i -= K;
