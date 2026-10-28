@@ -70,7 +70,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T14:50:52.478Z  
+**Submitted:** 2026-10-28T14:51:23.063Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -85,10 +85,7 @@ int main() {
         char arr[N + 1];
         scanf("%s", arr);
         int alarms = 0;
-        int num = K, j;
         for (i = N - 1; i >= 0; i--) {
-            num = K + 1;
-            j = i;
             if (arr[i] == '1') {
                 alarms++;
                 i -= K;
