@@ -15,12 +15,8 @@ int main() {
             num = K + 1;
             j = i;
             if (arr[i] == '1') {
-                while (num-- && j >= 0) {
-                    if (arr[j] == 0) {
-                        arr[j--] = '0';
-                        alarms++;
-                    }
-                }
+                alarms++;
+                i -= K;
             }
         }
         printf("%d\n", alarms);
