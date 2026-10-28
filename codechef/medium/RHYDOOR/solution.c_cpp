@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", & T);
+    while (T--) {
+        int N;
+        scanf("%d", & N);
+        int i = 0;
+        char arr[N + 1];
+        scanf("%s", arr);
+        int streak = 0;
+        while (i < N - 2) {
+            if (arr[i] == arr[i + 1] && arr[i] == arr[i + 2]) {
+                streak++;
+                i += 3;
+            }
+            else {
+                i++;
+            }
+        }
+        printf("%d\n", streak);
+    }
+    return 0;
+}
