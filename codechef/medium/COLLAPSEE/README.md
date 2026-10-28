@@ -67,7 +67,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T15:18:31.987Z  
+**Submitted:** 2026-10-28T15:24:27.631Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -78,12 +78,16 @@ int main() {
     while (T--) {
     int N;
     scanf("%d", &N);
-    int i;
+    int i, value = 0;
     int arr[N];
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
+        if (i<N-2){
+            value+=arr[i];
+        }
     }
-    
+    value += arr[N-2] + arr[N-1];
+    printf("%d\n", value);
     }
     return 0;
 }
