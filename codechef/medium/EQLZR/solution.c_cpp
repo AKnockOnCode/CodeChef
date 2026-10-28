@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int N;
+    scanf("%d", &N);
+    int i;
+    int arr[N];
+    for (i=0;i<N;i++){
+        scanf("%d", &arr[i]);
+    }
+    
+    }
+    return 0;
+}
