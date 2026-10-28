@@ -68,28 +68,29 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T14:54:05.712Z  
+**Submitted:** 2026-10-28T14:55:30.712Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
     int T;
-    scanf("%d", &T);
+    scanf("%d", & T);
     while (T--) {
-    int N;
-    scanf("%d", &N);
-    int i;
-    int arr[N];
-    for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
-    }
-    int max = 0, count = 0;
-    for (i = 0; i < N - 1; i++){
-        if (arr[i] + 1 == arr[i + 1]){
-            count++;
+        int N;
+        scanf("%d", & N);
+        int i;
+        int arr[N];
+        for (i = 0; i < N; i++) {
+            scanf("%d", & arr[i]);
         }
-    }
+        int max = 0, count = 0;
+        for (i = 0; i < N - 1; i++) {
+            if (arr[i] + 1 == arr[i + 1]) {
+                count++;
+            }
+        }
+        printf("%d\n", max);
     }
     return 0;
 }
