@@ -68,7 +68,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T14:51:36.719Z  
+**Submitted:** 2026-10-28T14:54:05.712Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -84,7 +84,12 @@ int main() {
     for (i=0;i<N;i++){
         scanf("%d", &arr[i]);
     }
-    
+    int max = 0, count = 0;
+    for (i = 0; i < N - 1; i++){
+        if (arr[i] + 1 == arr[i + 1]){
+            count++;
+        }
+    }
     }
     return 0;
 }
