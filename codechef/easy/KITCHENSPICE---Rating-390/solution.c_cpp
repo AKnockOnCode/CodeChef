@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int X;
+    scanf("%d", &X);
+    if (X<4){
+        printf("MILD\n");
+    }
+    else if (X>6){
+        printf("HOT\n");
+    }
+    else{
+        printf("MEDIUM\n");
+    }
+    }
+    return 0;
+}
