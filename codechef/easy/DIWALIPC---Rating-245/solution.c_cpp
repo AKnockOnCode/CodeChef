@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", & T);
+    while (T--) {
+        int P, D, K, B;
+        scanf("%d %d %d %d", & P, & D, & K, & B);
+        if (P + K * D <= B) {
+            printf("YES\n");
+        }
+        else {
+            printf("NO\n");
+        }
+    }
+    return 0;
+}
