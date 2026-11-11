@@ -65,7 +65,7 @@ The total number of stones moved is $3$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T14:44:30.924Z  
+**Submitted:** 2026-11-11T15:03:13.939Z  
 
 ```c_cpp
 #include <stdio.h>
