@@ -2,10 +2,10 @@
 
 int main() {
     int T;
-    scanf("%d", &T);
+    scanf("%d", & T);
     while (T--) {
         int N;
-        scanf("%d", &N);
+        scanf("%d", & N);
         char S[N + 1];
         scanf("%s", S);
         int count = 0;
