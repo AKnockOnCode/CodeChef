@@ -68,17 +68,17 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T15:00:37.626Z  
+**Submitted:** 2026-11-11T15:03:02.528Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
     int T;
-    scanf("%d", &T);
+    scanf("%d", & T);
     while (T--) {
         int N;
-        scanf("%d", &N);
+        scanf("%d", & N);
         char S[N + 1];
         scanf("%s", S);
         int count = 0;
