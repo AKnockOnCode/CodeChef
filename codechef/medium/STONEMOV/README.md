@@ -65,24 +65,24 @@ The total number of stones moved is $3$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T15:06:28.934Z  
+**Submitted:** 2026-11-11T15:06:38.492Z  
 
 ```c_cpp
 #include <stdio.h>
 
 int main() {
     int T;
-    scanf("%d", &T);
+    scanf("%d", & T);
     while (T--) {
         int N;
-        scanf("%d", &N);
+        scanf("%d", & N);
         long long arr[N];
         long long diff[N + 1];
         for (int i = 0; i <= N; i++) {
             diff[i] = 0;
         }
         for (int i = 0; i < N; i++) {
-            scanf("%lld", &arr[i]);
+            scanf("%lld", & arr[i]);
         }
         long long count = 0;
         long long received = 0;
