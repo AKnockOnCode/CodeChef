@@ -68,7 +68,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T14:52:23.650Z  
+**Submitted:** 2026-11-11T15:00:37.626Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -77,14 +77,20 @@ int main() {
     int T;
     scanf("%d", &T);
     while (T--) {
-    int N;
-    scanf("%d", &N);
-    int i;
-    int arr[N];
-    for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
-    }
-    
+        int N;
+        scanf("%d", &N);
+        char S[N + 1];
+        scanf("%s", S);
+        int count = 0;
+        for (int i = 0; i < N; i++) {
+            int tens = S[i] - '0';
+            int ones = S[(i + 1) % N] - '0';
+            int num = (tens * 10) + ones;
+            if (num % 4 == 0) {
+                count++;
+            }
+        }
+        printf("%d\n", count);
     }
     return 0;
 }
