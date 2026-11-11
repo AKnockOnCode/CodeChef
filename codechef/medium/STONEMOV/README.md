@@ -65,7 +65,7 @@ The total number of stones moved is $3$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T15:03:13.939Z  
+**Submitted:** 2026-11-11T15:06:28.934Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -74,25 +74,30 @@ int main() {
     int T;
     scanf("%d", &T);
     while (T--) {
-    int N;
-    scanf("%d", &N);
-    int i, j;
-    int arr[N];
-    for (i=0;i<N;i++){
-        scanf("%d", &arr[i]);
-    }
-    int X;
-    int count = 0;
-    for (i = 0; i < N; i++){
-        X = arr[i] < N - i - 1 ? arr[i] : N - i - 1;
-        for (j = i + 1; j <= X + i; j++){
-            if (arr[i]--){
-                arr[j]++;
-                count++;
+        int N;
+        scanf("%d", &N);
+        long long arr[N];
+        long long diff[N + 1];
+        for (int i = 0; i <= N; i++) {
+            diff[i] = 0;
+        }
+        for (int i = 0; i < N; i++) {
+            scanf("%lld", &arr[i]);
+        }
+        long long count = 0;
+        long long received = 0;
+        for (int i = 0; i < N; i++) {
+            received += diff[i];
+            long long current = arr[i] + received;
+            long long max_allowed = N - i - 1;
+            long long X = current < max_allowed ? current : max_allowed;
+            count += X;
+            if (X > 0) {
+                diff[i + 1] += 1;
+                diff[i + 1 + X] -= 1;
             }
         }
-    }
-    printf("%d\n", count);
+        printf("%lld\n", count);
     }
     return 0;
 }
