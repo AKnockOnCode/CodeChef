@@ -65,7 +65,7 @@ The total number of stones moved is $3$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T14:40:37.927Z  
+**Submitted:** 2026-11-11T14:43:51.558Z  
 
 ```c_cpp
 #include <stdio.h>
@@ -85,7 +85,7 @@ int main() {
     int count = 0;
     for (i = 0; i < N; i++){
         X = arr[i] < N - i - 1 ? arr[i] : N - i - 1;
-        for (j = i + 1; j < N; j++){
+        for (j = i + 1; j <= X + i; j++){
             if (arr[i]--){
                 arr[j]++;
                 count++;
