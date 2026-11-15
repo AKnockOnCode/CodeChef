@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+    char *name = A > B ? A > C ? "Alice" : "Charlie" : B > C ? "Bob" : "Charlie";
+    printf("%s\n", name);
+    }
+    return 0;
+}
