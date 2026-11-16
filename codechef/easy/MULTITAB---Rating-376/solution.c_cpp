@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", & T);
+    while (T--) {
+        int X, N;
+        scanf("%d %d", & X, & N);
+        if (N >= X * 3) {
+            printf("YES\n");
+        }
+        else {
+            printf("NO\n");
+        }
+    }
+    return 0;
+}
