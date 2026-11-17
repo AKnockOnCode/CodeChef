@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", & T);
+    while (T--) {
+        char S[6], R[6];
+        scanf("%s", S);
+        scanf("%s", R);
+        char M[6];
+        int i;
+        for (i = 0; i < 5; i++) {
+            if (S[i] == R[i]) {
+                M[i] = 'G';
+            }
+            else {
+                M[i] = 'B';
+            }
+        }
+        M[i] = '\0';
+        printf("%s\n", M);
+    }
+    return 0;
+}
