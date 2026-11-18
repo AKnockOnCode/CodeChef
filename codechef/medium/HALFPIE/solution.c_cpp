@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", & T);
+    while (T--) {
+        int N;
+        scanf("%d", & N);
+        int i;
+        int arr[N];
+        for (i = 0; i < N; i++) {
+            scanf("%d", & arr[i]);
+        }
+        int sum = 0;
+        int min = 200;
+        int check;
+        for (i = 0; i < N; i++) {
+            sum += arr[i];
+            if (i < N - 1) {
+                check = arr[i] + arr[i + 1];
+                if (check < min) {
+                    min = check;
+                }
+            }
+        }
+        printf("%d\n", sum - min / 2);
+    }
+    return 0;
+}
