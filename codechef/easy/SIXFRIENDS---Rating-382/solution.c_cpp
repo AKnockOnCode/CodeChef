@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    while (T--) {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+    int result = 3 * X < 2 * Y ? 3 * X : 2 * Y;
+    printf("%d\n", result);
+    }
+    return 0;
+}
