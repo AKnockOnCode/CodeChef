@@ -57,7 +57,7 @@ SECOND
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-26T17:40:56.200Z  
+**Submitted:** 2026-11-28T08:42:11.973Z  
 
 ```c_cpp
 #include <stdio.h>
